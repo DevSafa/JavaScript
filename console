@@ -1,0 +1,67 @@
+*(command + option + j) (MAC) -> open up athe chrome  developer console in MAC
+*elemnets , console , sources , Memory , ... are all developer tools
+*second way to open  the developer tools -> right click -> inspect
+*third way to open the developper tools ->chrome Menu->view->Developer->JavaScript console
+*JavaScript console allows to write and test JavaScript code
+
+----------------------
+*alert is a js function , alert will pop up a window containing "Hello world!" string
+
+        > alert("Hello world!")
+
+*let define a variable
+
+        > let js = 'amazing'
+
+
+        > if (js === 'amazing') alert('JavaScript is FUN!')
+
+        > js = 'boring'
+        < "boring"
+
+        > if (js === 'amazing') alert('JavaScript is FUN!')
+
+*do some simple math operations 
+
+        > 40+8+23-10
+        < 61
+----------------------
+
+*JavaScript is a HIGH-LEVEL, OBJECTED-ORIENTED, MULTI-PARADIGM programming language
+        *a programming language -> is basically just a tool that allows us to write code that will instruct a  computer
+                to do some thing (Instruct computer to do things).
+        *HIGHT-LEVEL language -> we don't have to worry about complex stuff like memory management
+        *OBJECT-ORIENTED -> based on objects, for storing most kinds of data 
+        *MULTI-PARADIGM language -> we can use different styles of programming (imparative and declarative programming) 
+                use different ways to structuring our code.
+
+*The role of JavaScript in WEB DEVELOPMENT
+        *3 core technologies of the web are : HTML , CSS ,JavaScript -> these 3 work together to create beautiful ,
+         interactive and dynamic web sites or web applications.
+        *HTML is responsible for the content of the page , text , images , buttons , ...., all the content is always written in HTML
+        *CSS is responsible for the presentation of that content , basically for styling 
+        *JavaScript is the real programming language of the internet, allows developpers to add dynamic and interactive effect to any web page 
+                we also use it to manipulate the content or the CSS , load data from remote servers , Building web application 
+        *we can use analogy of NOUNS , ADJECTIVES ,VERBS
+        *HTML -> NOUN (<p></p> means paragraph)
+        *CSS ->ADJECTIVE (because it describe the noun) (p {color :red} means the paragraph text is RED)
+        *JS  ->VERBS (p.hide() means hide the paragraph)
+
+*JAVASCRIPT  allows us to add dynamic effects to pages , and in fact to build entire web aplications in the browser
+
+*the JAVASCRIPT language and the web browser are actually two seperate things ->that means that javascript can 
+        also run outside the web browser, for example it's possible to use java script on web server,
+         using a very popular web technology called nodeJS which doesn't need any browser at all , 
+         and that's allows us to create so called backend applications, which are simply applications that run in web server
+         and interact with databases.
+
+*when we use javascript in the browser, it creates so called front end applications
+        MODERN javascript libraries and frameworks        (react vuejs angular +...).
+*we can use also JavScript to build Native mobile applications(react native - ionic framework ) as well as native desktop applications (tools like electron).
+
+*JavaScript releases :
+        ES5(ECMAScript) ->ES6/ES2015->...->...->ES11/ES2020->...(New update to JS every single year)
+        *ES6/ES2015(biggest update to the language ever)
+        *(ES6/ES2015.......ES11/ES2020) (Modern javascript)
+
+*learning JAVASCRIPT properly is the single best investement that you can make in your web developement cariere now >3 >3
