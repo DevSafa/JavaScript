@@ -1,0 +1,15 @@
+*index.html is an html file because usually JavaScript is attached to web pages , 
+    at lesat when we are building front end application.
+* to start we always need an html document .
+*in HTMl there is a script tag where we can write JavaScript
+
+*developer console is just an environment that was built to execute small pieces of code
+    and then shows results immediatly.
+
+*whenever we want to access the developer console we use the console.log() function.
+*console.log() is like building a bridge between our script  and the developer console on the other side.
+
+<script>
+
+     console.log(40 + 8 + 23 - 10);
+</script>
