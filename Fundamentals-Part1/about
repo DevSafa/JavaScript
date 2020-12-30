@@ -80,3 +80,17 @@ Data Types:
     'Jonas' "Jonas"
     //error "Jonas'
     //error Jonas -> js taught that is a variable so , it will return a ReferenceError
+
+-----------------------------------
+* the three different ways of declaring variable in JavaScript
+    - until this point we've always used let keyword to declare a variable
+    - however there is also const and var .
+    - let and const will introduced in ES6 , there are modern javascript.
+    - var keyword is the old way to declare variables.
+*when we need to mutate(reasigning)a variable , that's the perfect use case for using let , and that's also case for declaring empty variables.
+* we use const keyword to declare a variables that not supposed to change at any point in the future.
+*should i use  const or let to declare new variable?
+    -as best practice for writing clean code , always recommend use const by 
+    default and let only when you are really sure that the variable needs to be changed at some point in the future.
+    -changing variables introduces potential to create bugs, erros in your code .
+*var keyword should actually be completely avoided, however we should steel know how it works for legacy reasons.
