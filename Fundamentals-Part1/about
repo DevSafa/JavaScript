@@ -46,3 +46,37 @@ Values and Variables
     in fact variable name can only contain numbers, letters , underscore or dollar sign.
     we can't name a variable using the reserved JavaScript keyword.
 *let name = 'Jonas' , name is kind of a reserved keyword, but still legal to use.
+
+------------------------------------------------
+Data Types:
+*in every programming language values can have different types depending on the type of data we want them to hold.
+*we already saw strings and numbers. but there's actually more data types.
+* in Javascript every value  is either :
+    -an object which look something like :
+        let me = {
+            name : 'Jonas'
+        };
+    -a premetive value 
+        let firstName = 'Jonas'
+        let age = 30 ;
+*the 7 prinmitive DatA Types:
+    1-Number :Floating point Number , Used for decimals and integers --> let age = 23;
+    2-String :Sequence of characters , Used for text --> let firstName = 'Jonas'
+    3-Boolean :Logical type that can only be true or false , using for taking decision --> let fullAge = true;
+    * Number , String , Boolean are the most used data type , but there are more ,...
+    4-Undefined: Value taken by a variable that is not yet defined('empty value')  ('empty value') let children;
+    5-NULL : also means 'empty value'
+    6-Symbol (ES2015): value that is unique and cannot be changed (not useful for now)
+    7-BigInt(ES2020):Larger integers than the Number can hold
+
+*JavaScript has a feature called dynamic typing : we do not have to manually 
+    define data type of the value stored in a variable . Instead data tYPE ARE determined automatically.
+    in JavaScript Value has type , Not variable.
+    -another application of dynamic typing is that later in our code we can assign  a new value with a different data type to the same variable without a problem
+
+*javaScript programs are executed from top to bottom.
+* typeof is a special operator just as (+) or (-) that can be used to show the type of a value.
+*to craete a string we can use either double or single quote , the essential is using quotes.
+    'Jonas' "Jonas"
+    //error "Jonas'
+    //error Jonas -> js taught that is a variable so , it will return a ReferenceError
