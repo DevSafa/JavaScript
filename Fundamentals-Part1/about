@@ -13,3 +13,13 @@
 
      console.log(40 + 8 + 23 - 10);
 </script>
+
+*the script tag in HTMl page is an inline script
+*an inline script is a script that is not loaded from an external file , but embedded inside HTML
+*the only  advantage of inline script is we don't have to load another file ,
+    but on the other hand is pretty bad for separating the web site content from teh javascript logic,
+    so usually we use external javaScript files.
+*connecting HTML file  to JavaScript file is usually done at the end using script tag 
+    and specifying the src attribute to specify the path to js file.
+*Linking a JavaScript file    
+    <script src ="script.js" ></script>
