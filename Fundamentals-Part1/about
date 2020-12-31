@@ -94,3 +94,14 @@ Data Types:
     default and let only when you are really sure that the variable needs to be changed at some point in the future.
     -changing variables introduces potential to create bugs, erros in your code .
 *var keyword should actually be completely avoided, however we should steel know how it works for legacy reasons.
+-------------------------------
+Basic operators
+*an operator basically allows us to transform values or combine multiple values.
+*there are many categories of operators : mathematique operators (arithmetique operators), comparaison operators, logical operators ,
+    assignement operators, ....
+*we use comparison operators to produce boolean values.
+
+*the console  has access to all the variables in my .js file
+
+*how does javaScript know if should do the math first or should do comaparaison first?
+    -javaScript has some way of knowing that it should first do the arithemetic operation and then pass to the comparison .
