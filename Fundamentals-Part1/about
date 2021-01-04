@@ -114,3 +114,26 @@ Precedence of different operators
         basically the order in which operators are executed.
     *to see the precedence of al the difference operators:
         https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence -->check the table
+
+-------------------------------------
+Strings and Template Literals
+
+    *strings are very important part of programming , let's learn an easy way to build strings using
+    somethings called template litterals.
+    *starting from ES6 we can use template literales.
+    * with template literales we can write a string in more normal way and then basically insert the variables directly into the strings,
+     then they will simply being replaced.
+
+    * to tell js that we want to use template literales we use `` -> back ticks
+    * in order to tell js js that we are writing a template string we use back ticks
+    * template string is the one  most used ES6 features.
+    * we can use back ticks for any regular strings.
+        console.log(`Just a regular string...`);
+    *many developers actually started using back ticks for all strings, because 
+        then you don't have to think about which quotation marks you should use,
+        just use back ticks always.and then in case you need to insert a variable , then it's much 
+        easier then to go back and switch out the regular quotes.
+    * another great good use case of template literales is to create multilines strings.
+
+    
+    
