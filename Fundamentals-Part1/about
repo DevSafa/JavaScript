@@ -134,6 +134,19 @@ Strings and Template Literals
         just use back ticks always.and then in case you need to insert a variable , then it's much 
         easier then to go back and switch out the regular quotes.
     * another great good use case of template literales is to create multilines strings.
+-------------------------------------
+Taking Decision _if _else Statements
+    *an if else controle structure
+    
+    if (){
+
+    }else {
+
+    }
+    *this structure allow us to have more controle over 
+    the way that our code is executed. 
+    the code does not execute in a linear way.
+
 
     
     

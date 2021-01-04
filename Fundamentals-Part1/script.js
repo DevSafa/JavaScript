@@ -1,33 +1,30 @@
-const firstName ="Inas"
-const job = "Doctor"
-const birthYear = 1991;
-const year = 2037;
-//let's use this variables to build a string 
 
-//js will convert a number to a string so then it can concatenate them , join them with the rest of the strings
-const inas = "I'm " + firstName + ', a ' + (year - birthYear) 
-            + ' years old ' + job + ' !';
-// it's a pain to manage all this spaces using the concatenation operator (+)
-console.log(inas);
+const age = 15;
 
-//using template literales -> an easy way .
-//insid the curly braces we can write any javaScript expression.
-const inasNew = `I'm ${firstName}, a ${year - birthYear} years old ${job} !`;
-console.log(inasNew);
+const isOldEnough = age >= 18;
 
-console.log(`Just a regular string...`);
+if(isOldEnough){
+    console.log('Sarah can start driving license');
+}
 
-//multilines string before ES6
-console.log('String with \nmultiple \nlines');
+if (age >= 18){
+    console.log('Sarah can start driving license');
+}else{
+    //we will calculate how many yesrs left to sarah to take her licence
+    const yearsLeft = 18 - age;
 
- console.log('String with\n\
- multiple\n\
- lines');
+    console.log(`Saraha is too young . wait another ${yearsLeft} years :)`);
+}
 
-//with template strings tthere is a n easy way to do that
-//we can just hit ENTER.
-//we use back ticks to create multiline HTML elements
-//to insert them into a page dynamically .
- console.log(`String with
- multiple
- lines`);
+const birthYear = 2012;
+let century;
+//century in which person was born
+if (birthYear <= 2000){
+     century = 20;
+}else {
+     century = 21;
+}
+
+console.log(century);
+
+
