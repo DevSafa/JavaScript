@@ -1,38 +1,47 @@
+////////////
+// Coding Challenge #1
+
+/*
+    Mark and John are trying to compare their BMI (Body Mass Index),
+    which is calculated using the formula :
+    BMI = mass / height ** 2 = mass /(height * height).
+    (mass in Kg and height in meter).
+
+    1- store Mark's and John's mass and height in variables
+    2- Calculate both their BMIs using the formula (you can even implement both versions)
+    3- create a boolean variable 'markHeigherBMI' containing information about whether Mark has a 
+    heigher BMI than John .
+
+    Test Data 1 : Marks weights 78 kg and is 1.69 m tall .
+                John weights 92 Kg and is 1.95 m tall .
+    Test Data 2: Marks weights 95 kg and is 1.88 m tall.
+                John wights 85 kg and is 1.76 m tall
 
 
-const now = 2037;
-const ageJonas = now - 1991;
-const ageSarah = now - 2018;
+*/
+
+// console.log("Test Data 1:");
+// const massMark = 78;
+// const heightMark = 1.69;
+// const massJohn = 92;
+// const heightJohn = 1.95;
+
+// const BMIMark = massMark / heightMark ** 2;
+// const BMIJohn = massJohn / (heightJohn * heightJohn);
+
+// const markHeigherBMI = BMIMark > BMIJohn;
+// console.log("Mark BMI :"+BMIMark +"\n"+ "John BMI :"+BMIJohn+"\n"+"BMI MARK heigher THAN JOHN :"+markHeigherBMI);
 
 
-//usually all the maths operators are executed before the comparison operators.
-//the substraction operator is executed from left to right .
-//the Greater than operator is executed from left to right .
+console.log("Test Data 2:");
+const massMark = 95;
+const heightMark = 1.88;
+const massJohn = 85;
+const heightJohn = 1.76;
 
-console.log(now - 1991 > now - 2018);
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
 
-//substraction is left to right  execution 
-console.log(25 - 10 - 5);
-
-//assignement is a good example for right to left execution.
-
-let x,y; // x and y are equal to undefined.
-
-//after the minus operation left to right , we end up with :
-//x = y = 10.
-//the assignement operators are executed right to left so :
-// y = 10 annd the x = 10 ;
-
-// if we start the assignement from left to right , the expected result will be x = undefined , y = 10 ;// and that not the case
-x = y = 25 - 10 - 5; 
-console.log(x, y);
-
-// according to precedence table , the devision is happening before substruction.
-//ageSarah will be devided by 2 and then ageJonas is gonna be added
-const averageAgefalse  = ageJonas + ageSarah / 2;
-//the result is not logic , the average is bigger than the ages
-console.log(ageJonas, ageSarah,averageAgefalse); 
-
-const averageAgeTrue = (ageJonas +ageSarah) / 2;
-console.log(ageJonas,ageSarah,averageAgeTrue);
+const markHeigherBMI = BMIMark > BMIJohn;
+console.log("Mark BMI :"+BMIMark +"\n"+ "John BMI :"+BMIJohn+"\n"+"BMI MARK heigher THAN JOHN :"+markHeigherBMI);
 
