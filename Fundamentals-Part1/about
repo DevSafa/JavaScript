@@ -105,3 +105,12 @@ Basic operators
 
 *how does javaScript know if should do the math first or should do comaparaison first?
     -javaScript has some way of knowing that it should first do the arithemetic operation and then pass to the comparison .
+
+------------------------------------
+Precedence of different operators
+    now - 1991 > now - 2018
+    *why the two substructions  are executed before the comparison operator??
+    *well it works this way because javascript has a way defined order of operator precedence,
+        basically the order in which operators are executed.
+    *to see the precedence of al the difference operators:
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence -->check the table
