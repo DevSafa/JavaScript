@@ -1,80 +1,59 @@
-//////////////
-//type conversion 
-/////////////
 
-// converting strings to numbers
+// there is 5 falsy values : 0 , '', undefined , null , NaN
 
-const inputYear = '1991';
-console.log(inputYear);
-// to do some calculation with  inputYear , it will not work because it a string .
+console.log(Boolean(0)); // false
+console.log(Boolean(undefined)); //false 
+// any string that is not an empty string is a truthy value
+console.log(Boolean('Jonas')); //true
 
-//when we have a string and we add something to the string ,
-//it will basically concatenate the strings .
-//we can't expect that it actually add 18 to the number 1991 .
-console.log(inputYear + 18); //199118
+console.log(Boolean({})); //{} empty object // true
+console.log(Boolean('')); // false 
 
-// so we need a way to convert the string to a number .
-// we do that by using built-in Number() function 
-console.log(Number(inputYear) , inputYear);
-
-// inputYear still host the value 1991 as a string not as a number 
-//using the Number() function will simply give to us a converted version 
-console.log(Number(inputYear) + 18);
-
-// what if we try to convert something to a number that is impossible to convert
-console.log(Number('safa')); // NaN -> stands for not A  number 
-
-console.log(typeof NaN); // NaN actually mean invalid number , it still a number somehow but it's an invalid one .
-
-// converting numbers to strings
-
-console.log(String(123), 123);
-
-//////////////////
-//type coercion 
-/////////////////
-console.log("I'am " + 23 + " years old"); // I'am 23 years old 
-
-//how that does actually work?
-//it works this way because of type coercion 
-//thanks to type coercion writing this :
-console.log("I'am " + 23 + " years old");
-
-//will be the same as writing this :
-console.log("I'am " + "23" + " years old");
-
-//without type coercion in javascript , we have to do : 
-console.log("I'am " + String(23) + " years old");
-
-// this time javascript converts the strings to numbers 
-//the minus operator actually triggers the opposite conversion 
-console.log('23' - '10' - 3); // 10 
-
-//in this case will convert numbers to strings 
-console.log('23' + '10' + 3);  //23103
-
-// it will convert strings to numbers , because that the only way the multiply operator can works
-console.log('23' * '2'); //46
-
-//convert string values to numbers
-console.log('23' / '2');
-
-//logical operators
-// here js will convert strings to numbers automatically
-//the only way where it doesn't do that is the plus operator
-console.log('23' > '18');
+let  money = 0 ;
+// money is a number 
+// the number is zero .
+//in logical context of an if else statement condition
+//js will try to coerce any value into a boolean ,
+//js script will convert no boolean value to boolean , and that happen 
+//using truthy and falsy value rules 
+// 0 is a falsy value . so it converted to false .
+if (money) // so here number 0 will be onverted to false . it's like if (Boolean(money))
+    console.log("Don't spend it all ;)");
+else
+    console.log("you should get a job!");
 
 
-// Guess the output
+money = 100 ;
+if (money) 
+    console.log("Don't spend it all ;)");
+else
+    console.log("you should get a job!");
 
-// the plus operator will automaticaaly convert number to a string 
-let n  = '1' + 1; // n = '11'
+// check if the variable is defined or no 
 
-// the minus operator will convert the string to a number 
-n = n - 1; // n = '11' - 1 = 11 - 1 = 10
+let height;
+//height is undefined because we didn't assign to it any value yet .
+//undefined is a falsy value 
+if (height) // this height variable in this logical context will automatically be converted to a boolean 
+            // since height is undefined , and undefined is a falsy value , height will be false here .
+{
+    console.log("Yay! Height is defined");
+}else{
+    console.log("Height is undefined"); 
+}
 
-console.log(n); // n = 10 
+height = 123;
+if (height) 
+    console.log("Yay! Height is defined");
+else
+    console.log("Height is undefined"); 
 
-console.log(2+3+4+'5'); // '95'
-console.log( 3 - 1 -2 - '6') // -6
-console.log('10'- '4' - '3' -2 + '5'); // '15'
+    // illustrate an example that can be a problem using this approach 
+// we will get a problem if the height is  0 
+// because 0 is a lso a falsy value
+// it's a bug , amn error in our application 
+height = 0;
+if (height) 
+    console.log("Yay! Height is defined");
+else
+    console.log("Height is undefined"); 
