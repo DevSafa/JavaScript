@@ -147,7 +147,37 @@ Taking Decision _if _else Statements
     the way that our code is executed. 
     the code does not execute in a linear way.
 -----------------------------------------
+Type conversion and Coercion
 
-
+    -converting between types is something that we do in every programming language
+    - for example converting a string to a number , or a number to a boolean ,... is something that we do all the time 
+    - in java script there is type conversion  and type coercion .
+    -type conversion is when we manually convert from one type to another .
+        explicitly we convert from one type to another .
+    -type coercion in javascript automatically convert type behind the scenes for us . 
     
     
+    -we can basically convert strings to numbers by basically using the built in Number() function .
+        -> the original value is actually not converted
+    -javascript give us this  NaN (not a number ) value whenever an operation 
+        that involves numbers fails to produce a new number 
+    -basically NaN means invalid number .
+    -String() and Number() functions needs to start with capital letter.
+    -JavaScript can only converts to three types :
+        -we can convert to a number , to a string or to a boolean 
+        -but we cannot for example convert something to undefined , or to NULL
+        -we saw how to convert to  a Number , and String  using Number() and String() functions .
+    --> this is type conversion because we do it manaually .
+
+    -javascript does type coercion automatically for us in  many situations 
+    - type coercion happens whenever an operator is dealing with rwo values that have different types
+        in that case javascript behind scenes will convert one the values to match the type of the other values,
+        so that in the end the operation can be executed .
+    - in java script the plus operator that we use triggers a coercion to Strings
+    - whenever tehre is a n operation between strings  and the number , the number will be converted to a string .
+    - the same happend in template literal , it takes all the number values , and also convert them to strings .
+    - if java script does not have type coercion like many other languages  , then we would have  manually do this like we learned before.
+
+    - actually not all the operators do type coercion to  string .
+    - coercion is actually a great mechanism that allow us to write a lot less code 
+        and also to write more readable code 
