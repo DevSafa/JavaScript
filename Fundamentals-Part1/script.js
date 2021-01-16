@@ -1,59 +1,48 @@
+let age = 18;
 
-// there is 5 falsy values : 0 , '', undefined , null , NaN
+if (age === 18) console.log("You just became an adult");
+//strict eqyality operator
+console.log(18 === 18);
+console.log(18 === 19);
+//loose equality operator
+console.log('18'== 18) // '18'string will be converted to a number
 
-console.log(Boolean(0)); // false
-console.log(Boolean(undefined)); //false 
-// any string that is not an empty string is a truthy value
-console.log(Boolean('Jonas')); //true
+console.log('18' === 18);
 
-console.log(Boolean({})); //{} empty object // true
-console.log(Boolean('')); // false 
+if (age === 18 ) console.log("you just become an adult :D (strict)");
+if (age == 18 ) console.log("you just become an adult :D (loose)");
 
-let  money = 0 ;
-// money is a number 
-// the number is zero .
-//in logical context of an if else statement condition
-//js will try to coerce any value into a boolean ,
-//js script will convert no boolean value to boolean , and that happen 
-//using truthy and falsy value rules 
-// 0 is a falsy value . so it converted to false .
-if (money) // so here number 0 will be onverted to false . it's like if (Boolean(money))
-    console.log("Don't spend it all ;)");
-else
-    console.log("you should get a job!");
+age = '18';
+if (age === 18 ) console.log("you just become an adult :D (strict)");
+if (age == 18 ) console.log("you just become an adult :D (loose)");
 
+//use of prompt() function
+//ask the user for his favorite number
+const favourite =prompt("WHAT'S you favourite number?");
+console.log(favourite); 
+console.log(typeof favourite);
 
-money = 100 ;
-if (money) 
-    console.log("Don't spend it all ;)");
-else
-    console.log("you should get a job!");
-
-// check if the variable is defined or no 
-
-let height;
-//height is undefined because we didn't assign to it any value yet .
-//undefined is a falsy value 
-if (height) // this height variable in this logical context will automatically be converted to a boolean 
-            // since height is undefined , and undefined is a falsy value , height will be false here .
-{
-    console.log("Yay! Height is defined");
-}else{
-    console.log("Height is undefined"); 
+// the loose equality operator will do type coercion
+if (favourite == 23){
+    console.log("Cool! 23 is an amzaing number!(loose)");
 }
 
-height = 123;
-if (height) 
-    console.log("Yay! Height is defined");
-else
-    console.log("Height is undefined"); 
+if (favourite === 23){
+    console.log("Cool! 23 is an amzaing number!(strict)");
+}
 
-    // illustrate an example that can be a problem using this approach 
-// we will get a problem if the height is  0 
-// because 0 is a lso a falsy value
-// it's a bug , amn error in our application 
-height = 0;
-if (height) 
-    console.log("Yay! Height is defined");
-else
-    console.log("Height is undefined"); 
+const fav = Number(prompt("What is your favourite number ?"));
+console.log(fav);
+
+if (fav === 23){
+    console.log("Cool! 23 is an amzaing number!(strict)");
+}else if (fav === 7){
+    console.log("Cool! 7 is an amzaing number!(strict)");
+
+}else if (fav === 9){
+    console.log("Cool! 9 is also a cool  number!(strict)");
+}else{
+    console.log("Number is not 23 or 7 ");
+}
+
+if (fav !== 23) console.log ("Why not 23 ?");
