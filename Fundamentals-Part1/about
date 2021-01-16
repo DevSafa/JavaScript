@@ -238,3 +238,10 @@ age = 14
             * !A AND B -> ->TRUE
             * A or B  ->false
 
+------------------------------------------------
+switch statement 
+    * switch statement is an alternative way of writing a complicated 
+        if-else statement when all we want to do is to compare one value to multiple different operations basically .
+    *switch statemment does a strict comparaison 
+    * switch is designed for equality  and not for like comparing staffs
+    *it ' is technically possible to do that (comparaison ) , but that is not the goal of the switch statemnet 
