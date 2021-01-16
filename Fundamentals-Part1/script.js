@@ -1,46 +1,18 @@
+if (23 > 10){
+    const str = '23 is bigger';
+    //the string 'is bigger' is an expression because it produce a value 
+    // const str = '23 is bigger'; is a statement because it does not produce a value .
 
-const day = 'sunday';
-
-//without break , the code simply continuous executing .
-// the switch does a strict comparaison 
-switch(day) {
-    case 'monday' :  // day === 'monday'
-        console.log('Plan course structure');
-        console.log('Go to coding meetup');
-        break;
-    case 'tuesday' :
-        console.log('prepare theory videos');
-        break;
-    case 'wednesday' : // we can run the same code for two different values
-    case 'thursday' :
-        console.log("Write code examples");
-        break;
-    case 'Friday':
-        console.log('Record videos');
-        break;
-    case 'saturday' :
-    case 'sunday' :
-        console.log("Enjoy the weekend :D");
-        break;
-    // to finish we can also set a default , the dafault will be executed if all the previous failed 
-    default :
-        console.log('Not a valid day !');
 }
 
-// write the logic with different syntax .
+console.log(`I'am ${2037 - 1991} years old.`);//${2037 - 1991}  is a n expression 
 
-if (day === 'monday'){
-    console.log('Plan course structure');
-    console.log('Go to coding meetup');
-}else if (day === 'tuesday'){
-    console.log('prepare theory videos');
-}else if (day === 'wednesday' || day === 'thursday'){
-    console.log("Write code examples");
-}else if (day === 'friday'){   
-    console.log('Record videos');
-}else if (day === 'saturday' || day === 'sunday'){
-    console.log("Enjoy the weekend :D");
-}else{
-    console.log('Not a valid day !');
-}
+// we cannot do that 
 
+/*
+console.log(`I'am ${2037 - 1991} years old.${}`if (23 > 10){
+    const str = '23 is bigger';});
+*/
+
+ const me = 'Jonas';
+ console.log(`I'am ${2037 - 1991} years old.${me}`)
