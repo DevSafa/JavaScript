@@ -219,3 +219,22 @@ Equality operators
 * !== is the strict version
 
 * in both cases equality and no equaltily make sure to use the strict version . (===  , !==)
+
+-------------------------------------------
+Boolean Logic 
+
+* basically boolean logic is a branch of computer science which uses true and false values to solve complex logical problemes
+ basic Boolean Logic : the AND , OR & NOT operators
+* example
+  -------
+age = 14 
+        * Boolean variables
+        A : age is greater or equal 20 ->false
+        B : age is less than 30 -> true
+        * let's use operators
+            * !A -> true
+            * A AND B -> false
+            * A OR B  -> true
+            * !A AND B -> ->TRUE
+            * A or B  ->false
+
