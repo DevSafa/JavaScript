@@ -1,18 +1,27 @@
-if (23 > 10){
-    const str = '23 is bigger';
-    //the string 'is bigger' is an expression because it produce a value 
-    // const str = '23 is bigger'; is a statement because it does not produce a value .
 
-}
+const age = 15 ;
 
-console.log(`I'am ${2037 - 1991} years old.`);//${2037 - 1991}  is a n expression 
+age >= 18 ? console.log("I like to drink tea") :
+ console.log("I like to drink water"); // the else part 
 
-// we cannot do that 
+ // the whole operator here is an expression , and the expression produce a value 
+ const drink = age >= 18 ? 'wine' : 'water';
+ console.log(drink);
 
-/*
-console.log(`I'am ${2037 - 1991} years old.${}`if (23 > 10){
-    const str = '23 is bigger';});
-*/
+ let drink2;
 
- const me = 'Jonas';
- console.log(`I'am ${2037 - 1991} years old.${me}`)
+ //we need to declare the variable outside the if -else block , because
+ //any variable declared inside the block is nota vailable outside.
+ if (age >= 18){
+     drink2 = 'wine';
+
+ }else{
+     drink2 = 'water';
+ }
+ console.log(drink2);
+
+ // using ternary operator , we're able to transform this  if-else block of code
+ // into one small operation . 
+
+ //using ternary operator in template literal .
+ console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);

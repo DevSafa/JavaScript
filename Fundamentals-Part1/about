@@ -262,3 +262,14 @@ statements and Expressions
     * basically whanever something ends with a semi-colon , that's is  stAtement  , it's like a complete sentence.
 
     * in  template litteral we can only insert expressions and not statements 
+
+---------------------------------------------------
+the conditional ternary operator
+     *we already saw two ways of writing conditional : the regular if-else statement , switch statement 
+    * the conditional operator : allow us to write something simelar to if-else statement but all in one line .
+    *the conditional operator is also called the ternary operator , because it has 3 parts .
+        the conditions + if part + else part 
+    *conditional operator is an operator , and the operator always produce a value .
+    * since a ternary operator is really an expression , we can use it in template eliteral , unlike if-else statement .
+    * ternary operator is perfect when we just need to take a quicck decision .
+    * we still need if-else statement when we have bigegr blocks of code that we need to execute base on a condition .
