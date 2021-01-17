@@ -30,3 +30,5 @@ Function Declarations vs expressions
 Arrow functions
     * is a third type of function that is addedd to javascript in ES6
     * arrow function is simply a special form of function expressions , that is shorter and faster to write .
+----------------------------
+Function Calling other functions
