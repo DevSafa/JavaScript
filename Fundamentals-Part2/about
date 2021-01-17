@@ -1,0 +1,16 @@
+strict mode
+    * is a special mode that we can activate in javascript , 
+    wich make it easy for us to write a secure javascript code.
+    * to activate strict mode , all we have to do is write  'use strict';
+    * we activate the strict mode for the entire script 
+    *'use strict'; has to be the very first statement in the script
+    * if we have any code before it , then strict mode will not be activated  
+    * we can only avctivate strict mode for a specific function or a block .
+    *'use strict; to write more secure code 
+    * secure means  that strict mode makes it easy for us developpers to void accident errors
+        basically it avoid us to introduce bugs in our code and that because of two reasons:
+        -first  strict mode forbid us to do certain things
+        -second it  create visible errors in the developper console where  in certain situations without 
+        strict mode javascript would simply fail silently .
+    *another thing that strict mode does, is to introduce a short list of variable names that are reserved for features that may be added to the language a bit later.
+     
