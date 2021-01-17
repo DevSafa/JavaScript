@@ -13,4 +13,9 @@ strict mode
         -second it  create visible errors in the developper console where  in certain situations without 
         strict mode javascript would simply fail silently .
     *another thing that strict mode does, is to introduce a short list of variable names that are reserved for features that may be added to the language a bit later.
-     
+--------------------------------------
+Functions
+* a functions is  simply a piece of code that we can reuse over and over  again in our 
+    code.
+*don't repeat yourself.
+*console.log is also a function ,  a built -in function , that we don't have to built our-self.
