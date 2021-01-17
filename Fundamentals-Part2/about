@@ -19,3 +19,10 @@ Functions
     code.
 *don't repeat yourself.
 *console.log is also a function ,  a built -in function , that we don't have to built our-self.
+-------------------------------------
+Function Declarations vs expressions
+
+    * functions are just values , so we can store them in variables 
+    * what is the big difference between function declaration and function expression ?
+        the main practical  difference is that we can actually call function declaration before where they defined in the code . 
+        if we attempt to do the same thing with function expression , it should not work .

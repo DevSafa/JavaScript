@@ -1,47 +1,36 @@
 
-//defining a function
-// this function doesn't produce any value , it just print to the console.
-//technically it produces undefined , but we dont save the undefined value .
-function logger(){
-    console.log('My name is Jonas');
+'use strict';
+// function declaration ; because we use function keyword to declare a function.
+////////////////////////
+
+function calcAge(birthYear){
+    const age = 2037 - birthYear;
+    return age;
+}
+const age3 = calcAge1(2004);
+console.log(age3);
+//the parameter is kind of the placeholder in the function 
+function calcAge1(birthYear){
+   return 2037 - birthYear;
 }
 
-// invoking / runing / calling the function
-logger();
-logger();
-logger();
+// the argument is the actual value that we use to fill in that placeholder taht is the parameter.
+//invoke the function 
+const age1 = calcAge1(1991);
+console.log(age1); 
 
-// we can do , but doesn't make any sense
-logger(150);
+//function expression ; write a function basically without  a name , but we still define parameters , and function body .
+/////////////////////
 
-//pass data into a function. 
-//a function can also return data as well.
-//receive data anad return data back.
-//parameters are like variable that are specific only to that function .
-//and they  will get defined once we called the function .
+//script.js:25 Uncaught ReferenceError: Cannot access 'calcAge2' before initialization at script.js:25
+//const age4 = calcAge2('2004');
 
-// create a very generic function that works for any number of apples and oranges.
-function fruitProcessor(apples, oranges){
-   // console.log(apples, oranges);
-    //building a string using the input data that we get into the function
-    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
-    //return a value from the function
-    return juice;
+// a function without name also called anonymous function , the function is an expression (produces a value)
+//we use that value and we store it in calcAge2 , and that variable is the function .
+const calcAge2 = function(birthYear){
+    return 2037 - birthYear
 }
 
-fruitProcessor(5, 0);
-// if we want that value that was returned , we need to store it in a variable
-// we called fruitProcessor() functions with two argument ; 5 and 0 
-// and these arguments are the actual value of the function parameters which are apples and oranges .
-// when the function is runing , apples will be 5 and oranges will be 0 .
-// saving the result of the function in a variable.
-const appleJuice = fruitProcessor(5, 0);
-console.log(appleJuice);
-console.log(fruitProcessor(5, 0));
+const age2 = calcAge2(1991);
+console.log(age2);
 
-const appleOrangeJuice = fruitProcessor(2 , 4);
-console.log(appleOrangeJuice);
-
-//built-in function
-const num = Number('234');
-console.log(num);
