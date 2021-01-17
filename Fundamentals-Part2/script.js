@@ -1,36 +1,37 @@
-
 'use strict';
-// function declaration ; because we use function keyword to declare a function.
-////////////////////////
 
-function calcAge(birthYear){
-    const age = 2037 - birthYear;
-    return age;
-}
-const age3 = calcAge1(2004);
-console.log(age3);
-//the parameter is kind of the placeholder in the function 
-function calcAge1(birthYear){
-   return 2037 - birthYear;
-}
-
-// the argument is the actual value that we use to fill in that placeholder taht is the parameter.
-//invoke the function 
-const age1 = calcAge1(1991);
-console.log(age1); 
-
-//function expression ; write a function basically without  a name , but we still define parameters , and function body .
-/////////////////////
-
-//script.js:25 Uncaught ReferenceError: Cannot access 'calcAge2' before initialization at script.js:25
-//const age4 = calcAge2('2004');
-
-// a function without name also called anonymous function , the function is an expression (produces a value)
-//we use that value and we store it in calcAge2 , and that variable is the function .
+//function expression
 const calcAge2 = function(birthYear){
-    return 2037 - birthYear
+    return 2037 - birthYear;
 }
 
-const age2 = calcAge2(1991);
-console.log(age2);
+//Arrow function ; it's a special form of function expression ; it still a function expression actually .
+//////////////////
 
+// one parameter , one line of code when we return .
+birthYear => 2037 - birthYear;
+
+// to use the arrow function we store it in a variable:
+const calcAge3 = birthYear => 2037 - birthYear;
+const age3 = calcAge3(1991);
+console.log(age3);
+
+//one parameter , more than one line of code
+const yearsUntilRetirement1 = birthYear => {
+    const age = 2037 - birthYear;
+    const retirement = 65 - age;
+    // write return explicitly , because we have more than one line in function definition .
+    return retirement;
+}
+
+console.log(yearsUntilRetirement1(1991));
+//more than one parameter
+const yearsUntilRetirement2 = (birthYear,firstName) => {
+    const age = 2020 - birthYear;
+    const retirement = 65 - age;
+    // write return explicitly , because we have more than one line in function definition .
+    return `${firstName} retires in ${retirement} years`;
+}
+
+console.log(yearsUntilRetirement2(1997 , 'Safa'));
+console.log(yearsUntilRetirement2(2004 , 'Inas'));

@@ -26,3 +26,7 @@ Function Declarations vs expressions
     * what is the big difference between function declaration and function expression ?
         the main practical  difference is that we can actually call function declaration before where they defined in the code . 
         if we attempt to do the same thing with function expression , it should not work .
+-----------------------------------
+Arrow functions
+    * is a third type of function that is addedd to javascript in ES6
+    * arrow function is simply a special form of function expressions , that is shorter and faster to write .
