@@ -32,3 +32,28 @@ Arrow functions
     * arrow function is simply a special form of function expressions , that is shorter and faster to write .
 ----------------------------
 Function Calling other functions
+-----------------------------
+Reviewing functions
+    *different function types 
+
+    function calcAge(birthYear){
+        return 2037 - birthYear;
+    }
+    -->function declaration : function that can be used before it's declared
+
+    const calcAge = function(birthYear){
+        return 2037 - birthYear;
+    }
+
+    --> function expresison : essentially a function value stored in a variable
+
+    const calcAge = birthYear => 2037 - birthYear
+
+    -->arrow function : great for one quick one-line functions . Has no This keyword (more later ...)
+
+    * three different ways of writing functioons , but they all work in a similar way : receive input data , transform data ,a nd then output data 
+
+    *Parameters are placeholders to receive input values , Like local variables of a function
+    *Function body : block of code that we want to reuse . Processes teh function's input.
+    *Argument : actual values of function parameters , to input data .
+    *Return statement : output a value from teh function and terminate execution
