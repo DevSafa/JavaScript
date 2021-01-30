@@ -1,61 +1,64 @@
 'use strict'
-///////////////////////
-//coding Challenge #1
 
-/*
-Back to the two gymnastics teams , The Dolphins and Koalas! there is a new gymnastics
-discipline  , which works differently.
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
 
-Each team competes 3 times , and then the average of 3 scores is calculated 
-(so one average score per team).
-A team only wins if it has at least Double the average score of the  other team . oTHERWISE ,
-NO team wins!
+// litteral syntax
+const friends = ['Michael','Steven','Peter'];
+console.log(friends);
 
-1 - Create an arrow function 'calcAverage' to calculate the average of 3 scores.
-2 - Use the function to calculate the average for both teams
-3-create a function 'checkWinner' that takes the average score of each team as parameters
-('avgDolphins' and 'avgKoalas'), and then logs the winner to the console ,
- together with the victory points , according
-to the rule above .Example ; "Koalas win (30 vs. 13)".
-4- Use the 'checkWinner' function to determine the winner for both DATA 1  and DATA 2 .
-5- Ignore draws this time.
+//Array() is a function , new is a keyword
+const y = new Array(1991 , 1984 , 2008, 2020);
+console.log(y);
 
-TEST DATA 1 :Dolphins score 44, 23 and 71 . Koalas score 65,54 and 49
-TEST DATA 2 :Dolphins score 85, 54 and 41 . Koalas score 23, 34 and 27.
+//arrays are zero based
+console.log(friends[0]);
+console.log(friends[1]);
+console.log(friends[2]);
 
-HINT : to calculate average of 3 valuees , add them all  together and devide by 3
-HINT : to check if number A is a t least double number B , check for A >= 2 * B . apply this to the team average scores
+//length is a property
+//number of elements of the array 
+console.log(friends.length);
 
-GOOD LUCK.
-*/
+// the last element in the array 
+// inside square bracket js , expect an expression(produce value)
+console.log(friends[friends.length -1]);
 
-const calcAverage  = (a , b, c) => (a+b+c) / 3;
+//add elements to the array
 
-console.log('Test DATA 1'); 
-let scoreDolphins = calcAverage(44,23,71); //= use let so that we can reassigned them 
-let scoreKoalas = calcAverage(65, 54, 49);
+friends[2] = 'Safa';
 
-console.log(`Dolphins score = ${scoreDolphins}\nKoalas score = ${scoreKoalas}`);
+console.log(friends);
 
-const checkWinner =function(avgDolphins , avgKoalas){
-    let winner;
-    if (avgDolphins >= (2 * avgKoalas))
-        console.log(`Dolphins wim (${avgDolphins}) vs. ${avgKoalas}`);   
-    else if (avgKoalas >= (2 * avgDolphins))
-        console.log(`Koalas win (${avgKoalas}) vs. ${avgDolphins}`);  
-    else
-        console.log('No team wins...');
+// we can't do 
+//friends = ['Bob' , 'Alice'];
+
+// an array can hold values with different types all at the same time
+
+const firstName= 'safa';
+const me = [firstName, 'Barka' , 2021 - 1997 ,'1337student',friends];
+console.log(me);
+console.log(me.length);
+
+console.log('---------------');
+//Exercice
+
+const calcAge = function(birthYear){
+    return 2021 - birthYear;
 }
 
-checkWinner(scoreDolphins,scoreKoalas);
+const years = [1990, 1967, 2002, 2010 , 2018];
 
-//----------------------------------------
+//NaN
+console.log(calcAge(years));
+//we cannot do operations witha arrays . years + 10(will convert the arrauy to string and add 10 to it) 
+//, years - 10(NaN);
 
-console.log('Test DATA 2');
-scoreDolphins = calcAverage(85,54,41);
-scoreKoalas = calcAverage(23, 34, 27);
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
 
-
-console.log(`Dolphins score = ${scoreDolphins}\nKoalas score = ${scoreKoalas}`);
-checkWinner(scoreDolphins,scoreKoalas);
-
+const ages = [calcAge(years[0]) , calcAge(years[1]) , calcAge(years[years.length - 1])];
+console.log(ages);

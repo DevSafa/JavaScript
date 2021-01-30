@@ -57,3 +57,11 @@ Reviewing functions
     *Function body : block of code that we want to reuse . Processes teh function's input.
     *Argument : actual values of function parameters , to input data .
     *Return statement : output a value from teh function and terminate execution
+-------------------------------
+Introduction to arrays
+
+    *first data structure : arrays.
+    *we use data structure to store data 
+    *the two most important data structures at least in js are arrays and objects.
+    *an array isn't a primitive value , so we can always change it(mutate) , even if we declare it with const keyword.
+        what we cannot do is to replace the entire array.
