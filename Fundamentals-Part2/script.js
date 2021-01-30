@@ -16,41 +16,46 @@ NO team wins!
 3-create a function 'checkWinner' that takes the average score of each team as parameters
 ('avgDolphins' and 'avgKoalas'), and then logs the winner to the console ,
  together with the victory points , according
-to the rule above .Example ; "Koalas with (30 vs. 13)".
+to the rule above .Example ; "Koalas win (30 vs. 13)".
 4- Use the 'checkWinner' function to determine the winner for both DATA 1  and DATA 2 .
 5- Ignore draws this time.
 
 TEST DATA 1 :Dolphins score 44, 23 and 71 . Koalas score 65,54 and 49
 TEST DATA 2 :Dolphins score 85, 54 and 41 . Koalas score 23, 34 and 27.
+
+HINT : to calculate average of 3 valuees , add them all  together and devide by 3
+HINT : to check if number A is a t least double number B , check for A >= 2 * B . apply this to the team average scores
+
+GOOD LUCK.
 */
 
-const calcAverage  = (score1 , score2, score3) =>{
-    return (score1 + score2 + score3) / 3;
-}
-const averageDolphins = calcAverage(44,23,71);
-const averageKoalas = calcAverage(65, 54, 49);
+const calcAverage  = (a , b, c) => (a+b+c) / 3;
 
-// const averageDolphins = calcAverage(85,54,41);
-// const averageKoalas = calcAverage(23, 34, 27);
+console.log('Test DATA 1'); 
+let scoreDolphins = calcAverage(44,23,71); //= use let so that we can reassigned them 
+let scoreKoalas = calcAverage(65, 54, 49);
 
-console.log(`Dolphins average = ${averageDolphins}\nKoalas average = ${averageKoalas}`);
+console.log(`Dolphins score = ${scoreDolphins}\nKoalas score = ${scoreKoalas}`);
 
-console.log('--------------------');
-
-console.log(`Average of both teams = ${(averageDolphins + averageKoalas) / 2}`);
-
-console.log('--------------------');
-
-const checkWinner = (avgDolphins , avgKoalas) =>{
+const checkWinner =function(avgDolphins , avgKoalas){
     let winner;
-    if (avgDolphins >= (2*avgKoalas))
-        return `Dolphins with (${avgDolphins}) vs. ${avgKoalas}`;   
+    if (avgDolphins >= (2 * avgKoalas))
+        console.log(`Dolphins wim (${avgDolphins}) vs. ${avgKoalas}`);   
     else if (avgKoalas >= (2 * avgDolphins))
-        return `Koalas with (${avgKoalas}) vs. ${avgDolphins}`;  
-    return `no winner`;
+        console.log(`Koalas win (${avgKoalas}) vs. ${avgDolphins}`);  
+    else
+        console.log('No team wins...');
 }
 
-const winner = checkWinner(averageDolphins,averageKoalas);
+checkWinner(scoreDolphins,scoreKoalas);
 
-console.log(`${winner}`);
+//----------------------------------------
+
+console.log('Test DATA 2');
+scoreDolphins = calcAverage(85,54,41);
+scoreKoalas = calcAverage(23, 34, 27);
+
+
+console.log(`Dolphins score = ${scoreDolphins}\nKoalas score = ${scoreKoalas}`);
+checkWinner(scoreDolphins,scoreKoalas);
 
