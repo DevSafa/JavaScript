@@ -65,3 +65,24 @@ Introduction to arrays
     *the two most important data structures at least in js are arrays and objects.
     *an array isn't a primitive value , so we can always change it(mutate) , even if we declare it with const keyword.
         what we cannot do is to replace the entire array.
+
+------------------------------------
+Basic array operations
+
+    *js have some built in function that we can basically
+     apply directly on arrays ,these are called methods.
+    *we can think of methods as arry operations baasically.
+
+    *add element to the end of an array : push()
+        ->return : length of  the new array.
+    *add element to the begening of an array : unshift()
+        -> return : length of the new array
+    * remove element from the end of array : pop()
+        -> return : return the removed element
+    *remove element from the begening of an array : shift()
+        -> return : return the removed element
+    * return the position of a certain elemnt in the array : indexOf()
+        return -1 if not found
+    * return true if the element is found in the array : includes()
+        false if not found
+    
