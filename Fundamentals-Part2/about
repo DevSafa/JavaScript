@@ -87,3 +87,25 @@ Basic array operations
         false if not found
 ------------------------------------
 Coding challenge #2
+----------------------------------------
+Introduction to objects
+    *after arrays , it's now time to learn about another data structuure in js
+    which is Objects.
+    *in Objects  we  actually defined key-value pairs
+    *Objects are probably the most fundamental in the whole javascript language
+    *there are many ways of creating objects (for example with curly braces )
+        const jonas = {
+            firstName: 'Jonas',
+            lastName: 'Schmedtmann',
+            age: 2037 - 1991,
+            job : 'Teacher',
+            friends: ['Michael', 'Peter', 'Steven']
+        };
+        the object litteral syntax (using curly braces)
+    *to recape , just like arrays we use obkject to essentially group together different variables
+        that really belong together, such as properties of Jonas.
+    *the big difference between objects and arrays is that in object the order
+        of the values does not matter at all when we want to retreive them .
+    *in arrays the order in which we specify the elements matter a lot, because that's how we access the elements
+    * we should use arrays for more order data , and objects for more unstructure data  and data that we actually want to name 
+    and then retrive from the object based on that name .
