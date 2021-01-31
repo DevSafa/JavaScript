@@ -85,4 +85,5 @@ Basic array operations
         return -1 if not found
     * return true if the element is found in the array : includes()
         false if not found
-    
+------------------------------------
+Coding challenge #2

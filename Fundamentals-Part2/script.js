@@ -1,65 +1,38 @@
 'use strict'
 
-const friends = ['Michael' , 'Steven' ,'Peter'];
+/////////////////////////
+// coding challenge #2
+/*
+Steven is still building his tip calculator , using the same rules as 
+before : Tip 15% of the bill if the bill value is between 50 and 300 , 
+and if the value is different , the tip is  20% .
 
-console.log(friends);
+1-write a function 'calcTip' that takes any bill value as an inpput and returns 
+the corresponding tip , calculated based on the rules above( you can check out the code 
+from first tip calculator challenge if you need to) . Use the function type you like the most.
 
-//push method adds elements to the end of an array
-friends.push('Safa');
+Test the function using a bill value of 100 .
+2- and now let's use arrays! so create an array 'bills' containing the test data below.
+3-create an array 'tips' containing the tip value for each bill , calculated 
+from the function you created before.
+4-BONUS: create ann array 'total' containing the total values , so the bill + tip.
 
-//push is technically  function , so it can return something .
-//the return value of push is the length of the new array .
-let newLength = friends.push('Inas');
+TEST DATA : 125, 555 and 44
 
-console.log(`array : ${friends}\nlength after push  : ${newLength}`);
-
-//add elements to begening of the array : unshift() method
-newLength = friends.unshift('Soukaina');
-console.log(`array : ${friends}\nlength after unshift: ${newLength}`);
-
-
-//remove elemnets : pop method
-friends.pop();
-console.log(friends);
-friends.pop();
-friends.pop();
-console.log(friends);
-
-//pop remove the last elements of the array , we don't need to pass 
-//argument to it .
-//pop method returned the removed element
-
-let popped = friends.pop();
-console.log(`removed element is : ${popped}\n array : ${friends}`);
+HINT :Remember that an array needs a value in each position , and that value can actualy
+be the returned value of a function! so you can just call a function as array values (so don't store
+the tip values in separate variables first , but right in the new array)
+*/
 
 
-//remove the first element of the array 
-popped =  friends.shift();
-console.log(`removed element is : ${popped}\n array : ${friends}`);
+const calcTip = (bill) => bill >=50 && bill <= 300 ? bill *0.15 : bill *(0.2);
 
-//which position a certain element is in the array  ?
-friends.push('Safa');
-console.log(friends);
+console.log(calcTip(100));
 
-console.log(friends.indexOf('Safa'));
-console.log(friends.indexOf('Michael'));
-//not an element in the array
-console.log(friends.indexOf('BoB'));
+const bills = [125 , 555 ,44];
 
-//ES6 method
-//instead of returning the index of the element , we simply it return true 
-//if the element is in the array , and false if it's not.
+const tips = [calcTip(bills[0]) , calcTip(bills[1]) , calcTip(bills[2])];
 
-console.log(friends.includes('Steven'));
-console.log(friends.includes('Safa'));
-console.log(friends.includes('Michael'));
+const totals = [bills[0]+tips[0] , bills[1]+tips[1] , bills[2] + tips[2]];
 
-
-friends.push(23);
-console.log(friends.includes('23')); // that's because it test with strict equality , doesn't 
-                                    // do type coercion .
-console.log(friends.includes(23));
-if (friends.includes('Safa'))
-{
-    console.log('You have a friend called Safa');
-}
+console.log(`bills ->${bills}\ntips ->${tips}\ntotals ->${totals}`);
