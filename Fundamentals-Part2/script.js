@@ -1,103 +1,62 @@
 'use strict'
 
-//create jonas object
+/////////////////////////
+//coding challenge #3
 
-const jonas = {
-    firstName :'Jonas',
-    lastName :'Schmedtmann',
-    birthYear :1991,
-    //string value
-    job : 'teacher',
-    friends :['Michael' ,'Peter','Steven'],
-    // aboolean value
-    hasDriversLicense :true,
-    // add name of the function as a property
-    //a function value
-    calcAge: function(birthYear){
-        return 2037 - birthYear;
-    }
-};
+/*
+Let's go back to mark and john comapring their BMIs!
+This time , let's use objects to implement the calculations!
+Remember :BMI = mass /height **2 = mass /(height *height).
+(mass in Kg and height in meter).
 
-//access the method using Dot notation
-//jonas.calcAge is computed -> it become the function value
-console.log(jonas.calcAge(1991));
+1-For each of them , create an object with preperties for their full 
+name , mass , and height (mark Miller and john Smith)
+2-create a 'calcBMI' method on each object to calculate the BMI
+(the same method on both objects).
+Store the BMI value to a property , and also return it from the method.
+3- Log to the console who has the higher BMI , together with the full name 
+and respective BMI .
+Example :"john Smith's  BMI (28.3) is heigher than mark Miller's (23.9)!"
 
-//we can also access the method using the bracket notation
-//we access the property calcAge using the bracket
-//jonas['calcAge] will be replaced basically with the function.
-console.log(jonas['calcAge'](1991));
+TEST DATA : mark's weights 78kg and is 1.69 m tall .
+    john weights 92 kg and is 1.95 m tall .
 
-console.log('-----------------------');
+GOOD LUCK
+*/
 
-//using this keyword
-const safa = {
-    firstName :'Safa',
-    lastName :'Barka',
-    birthYear :1997,
-    //string value
-    job : 'Developper',
-    friends :['Soukaina' ,'Inas','Asmaa'],
-    // aboolean value
-    hasDriversLicense :true,
-    //inside the method the This keyword  point to the jonas object
-    calcAge: function(){
-        console.log(this);
-        return 2037 - this.birthYear;
-    }
-};
-//dot notation
-console.log(safa.calcAge());
-//bracket notation
-console.log(safa['calcAge']());
-
-console.log(safa.calcAge());
-console.log(safa.calcAge());
-console.log(safa.calcAge());
-console.log(safa.calcAge());
-
-console.log('---------------------------');
-
-
-const inas = {
-    firstName :'Inas',
-    lastName :'Abau',
-    birthYear :2004,
-    friends :['Soukaina' ,'Inas','Asmaa'],
-    hasDriversLicense :false,
-    calcAge: function(){
-        //creating the property age
-        this.age = 2037 - this.birthYear;
-        return this.age;
-    }
-};
-
-console.log(inas.calcAge());
-
-//retreive the property that we already calculated before
-console.log(inas.age)
-console.log(inas.age)
-console.log(inas.age)
-console.log(inas.age)
-
-
-//write a method called getSummary , and this method should return a string that summarizedata about inas
-//"Jack is a 46-year old techear,and he has a driver license"
-
-const jack = {
-    firstName : "Jack",
-    birthYear : 1991,
-    hasDriverLicense :true,
-    job:"Teacher",
-
-    calcAge : function(){
-        this.age = 2037 - this.birthYear;
-        return this.age;
-    },
-    getSummary : function(){
-        return `${this.firstName} is a ${this.calcAge()}-years old ${this.job} , and he has
-            ${this.hasDriverLicense ? `a` : `no`} driver's license.`;
+const mark ={
+    fullName : "Mark Miller",
+    mass : 78,
+    height : 1.69,
+    calcBMI : function(){
+        this.bmi = this.mass /this.height ** 2;
+        return this.bmi;
     }
 }
-console.log(jack.getSummary());
 
+// (we can avoid repeating the same function in objects using Object oriented Programming ,...)->later
 
+const john = {
+    fullName :"John Smith",
+    mass :92,
+    height : 1.95,
+    calcBMI :function(){
+        this.bmi = this.mass /(this.height * this.height);
+        return this.bmi;
+    }
+}
+mark.calcBMI();
+john.calcBMI();
+
+console.log(`${mark.bmi > john.bmi 
+? 
+`${mark.fullName}'s BMI (${mark.bmi}) is heigher than ${john.fullName}'s BMI (${john.bmi})`
+: 
+`${john.fullName}'s BMI (${john.bmi}) is heigher than ${mark.fullName}'s BMI (${mark.bmi})`}`
+)
+
+if (mark.bmi > john.bmi){
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is heigher than ${john.fullName}'s BMI (${john.bmi})`)
+}else if(john.bmi > mark.bmi){
+    console.log(`${john.fullName}'s BMI (${john.bmi}) is heigher than ${mark.fullName}'s BMI (${mark.bmi})`)
+}

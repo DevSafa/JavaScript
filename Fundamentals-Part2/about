@@ -134,3 +134,5 @@ Object methods
         is called , it is equal the object calling the method.
     *arrays are actually also objects , they are just special kind of objects.
         so they have methods that we can use to manipulate them push() , pop() ,shift() ,unshift() ,includes()
+    --------------------------------------
+    Coding challenge #3
