@@ -1,26 +1,24 @@
 'use strict'
 
-// console.log('Lifting weight repetiion 1');
-// console.log('Lifting weight repetiion 2');
-// console.log('Lifting weight repetiion 3');
-// console.log('Lifting weight repetiion 4');
-// console.log('Lifting weight repetiion 5');
-// console.log('Lifting weight repetiion 6');
-// console.log('Lifting weight repetiion 7');
-// console.log('Lifting weight repetiion 8');
-// console.log('Lifting weight repetiion 9');
-// console.log('Lifting weight repetiion 10');
+//array
+const jonas =[
+    'jonas',
+    'Shmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael' ,'Peter','Steven'],
+    true
+];
 
-//creating a loop
-//for loop keeps runing while condition is TRUE
-for(let rep = 1; rep <= 10 ; rep++) //rep++ <==> rep = rep + 1
-{
-    console.log(`Lifting weight repetiion ${rep}`);
-}
+for(let i = jonas.length -1 ; i >= 0 ; i--)
+    console.log(i,jonas[i]);
 
-console.log('-------------');
+//how we can create a loop inside a loop
 
-for(let rep = 5; rep <= 13 ; rep++) //rep++ <==> rep = rep + 1
-{
-    console.log(`Lifting weight repetiion ${rep}`);
+//3 exercices , every exercice has 5 repitions .
+
+for(let exercise = 1 ; exercise < 4 ; exercise++){
+    console.log(`----------- Starting exercice ${exercise}`);
+    for (let rep = 1 ; rep < 6 ; rep++)
+        console.log(`Exercice ${exercise}: Lifting weight repetion ${rep}`);
 }
