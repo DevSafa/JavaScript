@@ -114,3 +114,6 @@ Dot vs .Bracket Notation
     *retreive data from object  and changing data in anobject using both the dot and bracket notation
     *when we need to first compute a property name then of course we have to use the bracket notation , in 
         other case use dot notation
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+    Member Access	        left-to-right	… . …
+    Computed Member Access	left-to-right	… [ … ]
