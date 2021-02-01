@@ -136,3 +136,7 @@ Object methods
         so they have methods that we can use to manipulate them push() , pop() ,shift() ,unshift() ,includes()
     --------------------------------------
     Coding challenge #3
+    ------------------------------------
+    The foor loop
+        *loops allow us to automate repetitive tasks , tasks that we have to perform over and over again
+        
