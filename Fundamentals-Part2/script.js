@@ -1,58 +1,103 @@
 'use strict'
 
-const  jonas = {
+//create jonas object
+
+const jonas = {
     firstName :'Jonas',
-    lastName : 'Schmedtmann',
-    age :2037 - 1991,
-    job :'Teacher',
-    friends :['Michael','Peter', 'Steven']
+    lastName :'Schmedtmann',
+    birthYear :1991,
+    //string value
+    job : 'teacher',
+    friends :['Michael' ,'Peter','Steven'],
+    // aboolean value
+    hasDriversLicense :true,
+    // add name of the function as a property
+    //a function value
+    calcAge: function(birthYear){
+        return 2037 - birthYear;
+    }
 };
-console.log(jonas);
 
-//getting a property from the object
-// using dot
-console.log(jonas.lastName);
-//using bracket
-console.log(jonas['lastName']);
+//access the method using Dot notation
+//jonas.calcAge is computed -> it become the function value
+console.log(jonas.calcAge(1991));
 
-const nameKey = 'Name';
+//we can also access the method using the bracket notation
+//we access the property calcAge using the bracket
+//jonas['calcAge] will be replaced basically with the function.
+console.log(jonas['calcAge'](1991));
 
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
+console.log('-----------------------');
 
-//we cannot dot
-//console.log(jonas.'last' + nameKey)
+//using this keyword
+const safa = {
+    firstName :'Safa',
+    lastName :'Barka',
+    birthYear :1997,
+    //string value
+    job : 'Developper',
+    friends :['Soukaina' ,'Inas','Asmaa'],
+    // aboolean value
+    hasDriversLicense :true,
+    //inside the method the This keyword  point to the jonas object
+    calcAge: function(){
+        console.log(this);
+        return 2037 - this.birthYear;
+    }
+};
+//dot notation
+console.log(safa.calcAge());
+//bracket notation
+console.log(safa['calcAge']());
 
-//create a pop up window with an input field , and store the input inside the variable
-const interestedIn = prompt("What do you want to know about Jonas?choose between firstName, lastName , age , job , and friends");
+console.log(safa.calcAge());
+console.log(safa.calcAge());
+console.log(safa.calcAge());
+console.log(safa.calcAge());
 
-console.log(jonas.interestedIn); // the result is undefined
-//we get undefined  when we try to access a property in the object that does not exist.
+console.log('---------------------------');
 
-//undefined is what we get when we try to access a property on an object that does not exist ,
-//so jonas does not have a property called InterestedIn
 
-//so intead of dot notation , we use the bracket notation
-console.log(jonas[interestedIn]); //it replace InterestedIn when the value of the variable
+const inas = {
+    firstName :'Inas',
+    lastName :'Abau',
+    birthYear :2004,
+    friends :['Soukaina' ,'Inas','Asmaa'],
+    hasDriversLicense :false,
+    calcAge: function(){
+        //creating the property age
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    }
+};
 
-//undefined is a falsy value
+console.log(inas.calcAge());
 
-//when the user access a property that doesn't exits.
+//retreive the property that we already calculated before
+console.log(inas.age)
+console.log(inas.age)
+console.log(inas.age)
+console.log(inas.age)
 
-if (jonas[interestedIn]){
-    console.log(jonas[interestedIn]);
-}else{
-    console.log('Wrong request!choose between firstName, lastName , age , job , and friends');
+
+//write a method called getSummary , and this method should return a string that summarizedata about inas
+//"Jack is a 46-year old techear,and he has a driver license"
+
+const jack = {
+    firstName : "Jack",
+    birthYear : 1991,
+    hasDriverLicense :true,
+    job:"Teacher",
+
+    calcAge : function(){
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+    getSummary : function(){
+        return `${this.firstName} is a ${this.calcAge()}-years old ${this.job} , and he has
+            ${this.hasDriverLicense ? `a` : `no`} driver's license.`;
+    }
 }
+console.log(jack.getSummary());
 
 
-//how to use dot and bracket notation to add properties to a new object
-
-jonas.location ='Portugal';
-jonas['twitter'] = '@jonasschmedtman';
-console.log(jonas);
-
-//Cahllenge
-//"Jonas has 3 friends , and hist best friend called Michael"
-
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends , and his best friend called ${jonas.friends[0]}`);

@@ -117,3 +117,20 @@ Dot vs .Bracket Notation
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
     Member Access	        left-to-right	… . …
     Computed Member Access	left-to-right	… [ … ]
+--------------------------------------
+Object methods
+    objects just like arrays , can hold different typeof data 
+    and they can hold even arrays , and in fact they can even 
+    hold objects inside objects.
+    *functions are really just another type of values
+    * and if a function is just a value  , that's means that we can create a key-value pair , where
+        the value is a function 
+    *that means that we can in fact add functions to objects
+    *any function is attached to an object is called a method
+    * a method is actually a property that hold a value 
+    *in every method javascript give us access to a special variable
+        called this.
+    *the THis keyword or This variable is actually equal to the object on which the method 
+        is called , it is equal the object calling the method.
+    *arrays are actually also objects , they are just special kind of objects.
+        so they have methods that we can use to manipulate them push() , pop() ,shift() ,unshift() ,includes()
