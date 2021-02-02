@@ -1,24 +1,30 @@
 'use strict'
 
-//array
-const jonas =[
-    'jonas',
-    'Shmedtmann',
-    2037 - 1991,
-    'teacher',
-    ['Michael' ,'Peter','Steven'],
-    true
-];
+for (let rep = 1 ; rep <= 10 ; rep++)
+{
+    console.log(`Lifting weights repetition ${rep}`);
+}
 
-for(let i = jonas.length -1 ; i >= 0 ; i--)
-    console.log(i,jonas[i]);
+console.log('-------------');
 
-//how we can create a loop inside a loop
+let rep = 1;
+while (rep <= 10)
+{
+    console.log(`While: Lifting weights repetition ${rep}`);
+    rep++;
+}
 
-//3 exercices , every exercice has 5 repitions .
+console.log('--------------');
 
-for(let exercise = 1 ; exercise < 4 ; exercise++){
-    console.log(`----------- Starting exercice ${exercise}`);
-    for (let rep = 1 ; rep < 6 ; rep++)
-        console.log(`Exercice ${exercise}: Lifting weight repetion ${rep}`);
+//math.random => create a decimal number between 0 and 1
+//math.trunc() => remove the decimal part
+//Math.trunc(Math.random() * 6)  => get a number between 0 and 5
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6)
+{
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if(dice === 6)console.log('Loop is about to end...');
 }
