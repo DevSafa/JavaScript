@@ -1,5 +1,5 @@
 'use strict'
-
+//Day 1: Arithmetic Operators
 /**
 *   Calculate the area of a rectangle.
 *
@@ -38,3 +38,25 @@ console.log(getArea(3,4.5));
     }
 
 console.log(getPerimeter(3,4.5));
+
+console.log('-----------------');
+//Day 1: Functions
+/*
+*Implement a function named factorial that has one parameter: an integer,n . 
+    It must return the value of  n factorial.
+* 1 <= n <=10
+*the function must return the value of n factorial
+
+*/
+
+function factorial(n){
+   let fact = 1;
+    while (n >= 1)
+    {
+        fact *= n;
+        n--;
+    }
+    return fact;
+}
+
+console.log(factorial(4));
