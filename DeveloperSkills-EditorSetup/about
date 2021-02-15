@@ -1,0 +1,6 @@
+Setting up Prettier abd VS code 
+------------------------------
+https://prettier.io/docs/en/options.html
+-install prettier extension
+-create a snippet in VS ->settings ->User Snippets -> new Global Snippet file 
+-install todo highlight -> go to settings.json  and add todo highlight keywords
