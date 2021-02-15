@@ -4,3 +4,14 @@ https://prettier.io/docs/en/options.html
 -install prettier extension
 -create a snippet in VS ->settings ->User Snippets -> new Global Snippet file 
 -install todo highlight -> go to settings.json  and add todo highlight keywords
+
+Using Google ,StackOverflow amd MDN
+----------------------------------
+-use google to search : how we can find a maximum value in an array ?
+    javascript get max value in array : https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript
+continue : means that the rest of the iteration will  not be executed.
+
+- merge two arrays : MDN https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+
+-concat method is used to merge two or more array . This method does not change the existing arrays .
+but instead returns a new array 
