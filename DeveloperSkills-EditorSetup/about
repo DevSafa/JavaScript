@@ -15,3 +15,11 @@ continue : means that the rest of the iteration will  not be executed.
 
 -concat method is used to merge two or more array . This method does not change the existing arrays .
 but instead returns a new array 
+
+Debugging (Fixing errors)
+-----------------------
+Software bug : Defect or problem in a computer program .
+Basically , any unexpected or unintended behavior of a computer program is a software bug
+
+Codding challenge #1
+-------------------
