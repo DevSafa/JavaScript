@@ -67,3 +67,17 @@ can simply select all the elements of a certain type
 - we use the dot for the class selector ; dot is for the class , first is the class name
 
 - to select based on the ID we use the #
+
+Introduction to  CSS Box Model
+-----------------------------
+-the box model is the most fundamental parts of CSS,
+that's because is the main factor that defines how elements are displayed on  a web page 
+, annd also how they are sized .
+
+- according to the box model each and every elements on a web page can be seen as a rectanglar box , 
+each box can have a wisth , height , pading border , margin and content , we can specify all these using CSS properties.
+
+- but note that they are all optional , it can be some boxes without margin , ...
+
+- start (*) used to select all the elements in a web page
+- margin: 0 padding: 0 reset all the margin and padding of all elements
