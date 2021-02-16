@@ -41,4 +41,29 @@ DOM manipulation
 
 - because we have a form , so instead of div we use form element
 
-- div element is just a generic box which has no meaning at all , so we use form instead of div , because it has a meaning 
+- div element is just a generic box which has no meaning at all , so we use form instead of div , because it has a meaning
+
+Basic Styling with CSS
+---------------------
+- we use CSS to style elements
+- the style counts as settings for an html page , so we need to put it in side the head element
+
+- to style elements we need to first select them 
+- there are different types of selectors in CSS
+- the most basic selector is the element selector ; usinng teh element selctor we
+can simply select all the elements of a certain type
+  <style>
+        body {
+            background-color: green;
+        }
+    </style>
+- each CSS declaration has a property name and a value
+- usually we write CSS in an external CSS file like javaScript
+- <link/> element does not create a clickable link like  anchor element
+- we use <link/> to link css file to html file 
+- font-family property is a property that get inhereted.
+- in general most properties that are related to font are inherit
+- h1 h2 has their predefined font-size.
+- we use the dot for the class selector ; dot is for the class , first is the class name
+
+- to select based on the ID we use the #
