@@ -1,0 +1,14 @@
+Basic HTML Structure and Elements
+---------------------------------
+index.html is always the name of the 
+main file in any project
+-HTML stands for hypertext markup language
+- we use it to describe the content of web pages basically
+- HTML document is made of elements , we write elements using and opening 
+and closing tag 
+-the main element in all HTMl document is always html element
+
+- <head></head> element is like the the settings of the page , is describing the text 
+- what we put in the body is what is visible in the page 
+- <!DOCTYPE html> identify that document is HTML 5
+- <html lang="en"> telling the browser that we are using english language 
