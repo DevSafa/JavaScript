@@ -12,3 +12,33 @@ and closing tag
 - what we put in the body is what is visible in the page 
 - <!DOCTYPE html> identify that document is HTML 5
 - <html lang="en"> telling the browser that we are using english language 
+
+Attributes,Classes and IDs
+-------------------------
+-in HTMl ,element can have attribute , and this attribute  describes element
+-href attribute stands for hypertext reference
+
+- <a></a> the anchor element is an inline element
+- <h1></h1> is a block element
+
+- the image element needs also an attribute
+
+- two very important attributes that we can actually use in all elements,
+and which we can use to identify them, these are classes and Ids
+
+- we use classes and IDs to essentially name elements so we can select them in CSS in order 
+to style them . we also use IDs and classes to select elements from JavaScript when we do 
+DOM manipulation
+
+- classes and IDs are used to identify elements , specially classes
+- difference between classes and iDs , is that IDs has to be unique , the ID can only be used once on the page
+ while classes can be used over and over again ;
+ i could have more paragraphs called second , i could not have another element called my-image
+
+-in practice we almost never used IDs to style elements or to select them from javaScRIPT , IT's a good practice to use classes
+
+- the most generic way to create boxes in HTMl is a div element 
+
+- because we have a form , so instead of div we use form element
+
+- div element is just a generic box which has no meaning at all , so we use form instead of div , because it has a meaning 
