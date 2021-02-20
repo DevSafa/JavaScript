@@ -68,4 +68,5 @@ from our javascript code .
     which is the reason why DOM manipulation works the same in all browsers
 - besides the DOM there are actually a ton more APIs such as Timers , Fetch APIs...
 
-
+Selecting and Manipulating elements
+---------------------------------
