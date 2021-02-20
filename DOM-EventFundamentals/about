@@ -1,0 +1,18 @@
+Guess My Number Project
+-----------------------
+- guess a number between 1 and 20 
+- after a failed gess , the score decreases by 1 
+
+
+- in javascript we can select an element based on it's classs
+- like selecting elements in css , we can do the same with javascript
+- before learning Dom and what's DOM manipulation , let's learn an easy way 
+to select an html element  in javascript.
+for that we write 
+    document.querySelector()
+querySelector() is a method available on the document Global_Objects
+- into the method we need to pass a selector , and this selector is exactly the same selector that we could use in CSS.
+    document.querySelector('.message) => if it wass a classs
+    document.querySelector('#message) => if it was an instead
+    
+
