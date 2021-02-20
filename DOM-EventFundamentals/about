@@ -14,5 +14,58 @@ querySelector() is a method available on the document Global_Objects
 - into the method we need to pass a selector , and this selector is exactly the same selector that we could use in CSS.
     document.querySelector('.message) => if it wass a classs
     document.querySelector('#message) => if it was an instead
-    
+
+
+What's the DOM and DOM manipulation
+-----------------------------------
+-DOM stands FOR Document Object Model
+-DOM is a dtructured representation of HTML Documents.
+Allows javaScript to access HTML elements and styles to manipulate them .
+
+-for example by using DOM manipulation WE WILL be able to change text , HTML attributes , and even CSS styles
+
+- basically we can say that DOM is a connection point between HTML document and javascript code
+- the DOM is automatically created by the browser as soon as the HTML loads
+ , and it starts ina tree structure . (see What is DOM image)
+- in the tree each HTML element is an object.
+- when we talk about the DOM tree and DOM manipulation , we use the terms child element , parent element  and siblinng element and so on 
+- for each element in the HTMl there is one element node in the DOM tree.
+- we can access and interact with each of these nodes using JavaScript.
+- the DOM always starts with the document object , and document is a special object that we have access to in javascript
+- and this object (document) serves as an entry point to the DOM .
+- the querySelector() method is a available in the document object .
+- so document is the entry point to the DOM because we need it to start selecting elements.
+
+- the first child element of the document is usually  the html element (the root elements in all html files ),...
+- HTM has two childs elements head and body , in the html they are adjacent elements , and so they are 
+    siblings in our DOM as well .
+-DOM TREE HAS MORE THAT JUST ELEMENTS node
+-it also has nodes for alla the text itself , comments , and other stuff
+- the DOM is a complete representation of HTML document , so we can manipulate it in complex ways
+
+- many people beleives that the DOM and all the methods and properties ,
+    that we use to manipulate the DOM such as document or the query selector  and 
+    lots of other stuff are actually part of javascript , 
+    hoowever thiss is not the case
+
+- remember that js is a ctually th e dialect of the EcmaScript specification
+ and actually this DOM related stuff is simply not there , we had only use the javascript language itself
+
+- but starting in this section we will also use javascript in a browser.
+- sure we used the google chrome to run our code in the developer console , but that's not what i mean .
+-what i mean is to manipulate webpages that are actually displayed and rendered in the browser
+    just  like any normal website that you know 
+
+- if the DOM is not a part of the JavaScript language , then how does this all work .
+- the DOM and DOM  methods are actually part of something called the web APIs
+, the web APIs are like libraries that browsers implements , and that we can acces 
+from our javascript code .
+- API stands for Applicatiom Programming Interface
+
+- eb APIs are basically libraries that are also written in javascript
+- we don't have to import or do anything.
+- tehre is actually an official DOM specification that browsers implement
+    which is the reason why DOM manipulation works the same in all browsers
+- besides the DOM there are actually a ton more APIs such as Timers , Fetch APIs...
+
 
