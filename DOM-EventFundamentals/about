@@ -75,3 +75,17 @@ Handling click events
 --------------------
 -an event is something that happened on the page , for example a mouse click , a mouse moving , key prees ,click ...
 - with an event listenner we can wait for a certain event to happen and then react to it .
+
+Implementing the game logic
+--------------------------
+- In JavaScript, trunc() is a function that is used to return the integer portion of a number.
+It truncates the number and removes all fractional digits. Because the trunc() 
+function is a static function of the Math object,it must be invoked through the placeholder 
+object called Math.
+    console.log(Math.trunc(32.65));
+    console.log(Math.trunc(8.1));
+    console.log(Math.trunc(-4.2));
+
+--> 32
+    8
+    -4
