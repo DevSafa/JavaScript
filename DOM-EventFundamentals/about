@@ -89,3 +89,9 @@ object called Math.
 --> 32
     8
     -4
+
+Manipulating CSS styles
+----------------------
+
+-the DOM actually also includes the CSS styles
+- with DOM manipulation we can also change styles
