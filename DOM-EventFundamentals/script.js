@@ -1,27 +1,42 @@
 'use strict';
 
-// the first basically DDOM manipulation : selecting an element
-console.log(document.querySelector('.message'));
+//start developing application step by step
 
-//let's get the text from that element that we selected
-//the execution is done from left to right
-//getting the text content
-console.log(document.querySelector('.message').textContent);
+//select the button element itself
+//document.querySelector('.check'); => will return an element
 
-//set the text content of the element of teh class message
-//manipulate the text content of one of the DOM nodes
-document.querySelector('.message').textContent = 'Correct Number!';
+//call the addEventListenner method to that element
+//we need to pass the type of the event to the listenner ,
+//in this case is just a simple click 
+//then we need to tell the eventListenner what to do ; basically we need to specify 
+//the reaction to the click event.
+//we do that by definning a function , and that function  exactly contain the code 
+//that should executed whenever this click event happens in the check button.
+//addEventListenner is a special function , because as a second argument it accepts a function value.
 
-//get the text of the element
-console.log(document.querySelector('.message').textContent);
+//javascript engine will call this function as  soon as the event handled
+document.querySelector('.check').addEventListener('click' , function(){
+    //console.log(document.querySelector('.guess').value);
+        //let's a value to a variable
+    //const guess = document.querySelector('.guess').value;
+        //console.log(guess);
 
-// select the elemnt with teh class number and class score
-document.querySelector('.number').textContent = 13;
-document.querySelector('.score').textContent = 10;
+    //usually when you get something from the user interface, from an input field , it usually always 
+    //is a string
+        //console.log(typeof guess);
+    //if we want to compare numbers with numbers , we need first to convert the string to a number
+    const guess = Number(document.querySelector('.guess').value);
 
-// we get an empty value because there is really nothing in there
-console.log(document.querySelector('.guess').value);
+    console.log(typeof guess , guess);
 
-document.querySelector('.guess').value = 23;
-console.log(document.querySelector('.guess').value);
+    // implemet the game logic in case there is no guess
+    //check if there is a value 
+
+    //0 is  a falsy value , we use ! to convert guess from false to true
+    if (!guess){
+        document.querySelector('.message').textContent = 'No number!';
+    }
+});
+
+
 

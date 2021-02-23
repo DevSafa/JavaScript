@@ -70,3 +70,8 @@ from our javascript code .
 
 Selecting and Manipulating elements
 ---------------------------------
+
+Handling click events
+--------------------
+-an event is something that happened on the page , for example a mouse click , a mouse moving , key prees ,click ...
+- with an event listenner we can wait for a certain event to happen and then react to it .
