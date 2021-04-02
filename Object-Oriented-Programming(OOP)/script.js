@@ -1,100 +1,93 @@
 'use strict';
 
-// we learned how to implement prototypal inheritance with constructor functions
-// and then manually setting methods on the constructor functions prototype property
-
-// now it's time to return our attention to ES6 classes which essentially allow us to do the same exact
-//thing but using a nicer and more modern syntax.
-
-// classes in javascript does not works like classes in other languages like Java pr c++.
-//instead classes in java script are just synthetic sugar over what we learned in the last few videos.
-
-//classes still implement prototypal inheritance behind the scenes , but with a syntax that 
-//makes more sense to people coming from other programming languages , and that was basically the goal of adding 
-//classes to javascript.
-
-// implemet Person using a class
-// classes are just special types of functions 
-// behind the scenes classes are still functions  , and therefore we have class expression and class declaration
-
-//class expression
-    // const PersonClass = class {
-
-    // }
-
 //class declaration
 class PersonCl{
 
-    //add a constructor method  => it work in similar way as a constructor function 
-    //it's a method of this class
-    constructor(firstName, birthYear)
+    constructor(fullName, birthYear)
     {
-        //the act of creating an object is also works in similar way as previous , using the new 
-        //operator , this constructor will automatically be called when using new operator
-        
-        //set the properties of the object
-        this.firstName = firstName;
+        //whenever we set the fullName on this keyword ,
+        //then actually the method set fullName() ; the setter , will is gonna be executed
+        // and so that name that we pass in a s fullName will become the name argument for fullName
+        this.fullName = fullName;
         this.birthYear = birthYear;
     }
-    // add methods
-    // all the methods that we create in the class outside the constructur will be on the 
-    //prototype of the objects.
-    // and not in the objects themselves
-    // this is really just like before prototypal inheritance
-    // these methods will be automatically be added to the prootype property  of the class basically
 
     calcAge(){
         console.log(2037 - this.birthYear);
     }
-    greetI(){
-        console.log(`Hey ${this.firstName}`);
+    greet(){
+        console.log(`Hey ${this.fullName}`);
+    }
+
+    //add a getetr for the age property
+    /// it's like any regular method that we set in prototype
+    
+    get age(){
+        return 2037 - this.birthYear;
+    }
+    // getters and setters can be very useful for data validation 
+    // both the setetr function and constructor function are trying to set the exect same property name
+    // so that gives the macimum call error .
+    //when we have a setter which is trying to set a property that does already exist 
+    // as a convention we add undescore .
+    //it's just a different variaable name to avoid that naming conflict.
+    // however when we do _fullname , we are creating a new variable .
+
+    //this pattern here is important to understand . 
+    //set a property that already exists
+    set fullName(name){
+        console.log(name);
+        if(name.includes(' '))
+            this._fullName = name;
+        else  
+            alert(`${name} is not a full name!`);
+    }
+
+    get fullName(){
+        return this._fullName;
     }
 }
 
 
-const jessica = new PersonCl('Jessica',1996);
+const jessica = new PersonCl('Jessica D',1996);
 console.log(jessica);
 jessica.calcAge();
-//PersonCl acts just like any constructor function but  with alittle bit nicer syntax
 console .log (jessica.__proto__ === PersonCl.prototype);
+jessica.greet();
+console.log(jessica.age);
 
-//adding a method manually to the prototype
-PersonCl.prototype.greetO = function(){
-    console.log(`Hey ${this.firstName}`);
-}
-// this prouve one more time that the class really just hides the true nature 
-//of prototypal inheritance in javascript
-//this is great for people who are coming from another language and have experience with OOP
-// because it's going to be a bit easier for these developpers to start writing OOP code in javascript 
-// just make sure to understand construction functions , prototypes , and while prototype chain logic 
+const walter = new PersonCl('Walter',1965); // check in the console walter PersonCl {birthYear: 1965}
+const walter1 = new PersonCl('Walter White',1995);
 
-jessica.greetO();
-jessica.greetI();
+// we use getters and setters when we need especially a validation  by the time we are creating
+//a new object, that essentially what setter here does
 
-//1-classes are not hoisted even if they are  class declarations
-    //function declarations remember are hoisted which means we can use them  before they are declared in the code 
-    //but with classes that doesn't work 
-//2- just like functions classes are alsso first class citizens ; that means
-    //that we can pass them into functions and also return them from functions , that because classes
-    //are really special kind of function behind scenes
-//3- the body of the class is always executed in strict mode, and o even if we didn't activate it for our entire script
-    // all the code that is in the class will be executed in strict mode
+console.log("----------------------------------");
+//every Object in javascript can have setter and getter properties
+//we call these special properties accessor properties,
+//while the normal properties are called Data properties
+//getters and setters are basically functions that get and set a value, but on teh outside
+//they still look like regular properties
 
-console.log("--------------------------------------");
+//object litteral
+const account = {
+    owner: 'jonas',
+    movements: [200,530,120,300],
 
-const Person = function(firstName , birthYear)
-{
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-}
+    get latest(){
+        return this.movements.slice(-1).pop();
+    },
+    set latest(mov){
+        this.movements.push(mov);
+    },
 
-Person.prototype.calcAge= function(){
-    console.log(2037 - this.birthYear);
-}
-const max = new Person("Max", 1997);
-console.log(max);
-max.calcAge();
-console.log(max.__proto__ ===  Person.prototype);
+};
 
-//should use constructor functions  or if instead better to use classes
-// constructor functions are not like old or depracated syntax , it's 1000% fin to keep using them 
+// we use getter as a property
+
+console.log(account.latest);
+account.latest = 50 ; // not account.latest(50)
+console.log(account.movements);
+
+console.log(account);
+// classes also have getters and setters
