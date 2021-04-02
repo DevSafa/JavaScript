@@ -1,102 +1,115 @@
 'use strict';
 
+//let's now check out prototypal inheritance 
+//and the prototype chain on built-in objects such as arrays
+
+'use strict';
+
 //Prototypes
-//how Prorotypal Inheritance /Delegation works
-//--------------------------------------------
+const Person = function(firstName, birthYear){
+  
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+}
 
-/**everything starts with the Person constructor function that we've been developing.
- * 
- *this constructor function has a prototype property which is an object ,
+Person.prototype.calcAge = function (){
+    console.log(2037 - this.birthYear);
+};
 
- *and inside that object we defined  the calcAge method.
+const jonas = new Person('Jonas', 1991);
+console.log(jonas);
+const matilda = new Person('Matilda',2017);
+jonas.calcAge();
+matilda.calcAge();
 
- *Person.prototype itself actually also has a reference back to Person , which is the constructor property.
+Person.prototype.species = 'Homo Sapiens';
+console.log(jonas.species, matilda.species);
+
+console.log(jonas.hasOwnProperty('firstName'));
+console.log(jonas.hasOwnProperty('species'));
+
+//this the prototype of jonas which is exactly the prototype property of Person
+console.log(jonas.__proto__);
+
+// move on on theprototype chain and take a look on the prototype of jonas prototype
+//the prototype property of Object
+//Object.prototype is usualy on top of the prototype chain
+console.log(jonas.__proto__.__proto__);
+
+//Null  ; 
+console.log(jonas.__proto__.__proto__.__proto__);
+
+//can't read property __proto__ of NULL
+//console.log(jonas.__proto__.__proto__.__proto__.__proto__);
+
+//remember that person.prototype itself  has a constructor property, wich will point back to he person itself
+//the function itself
+console.log(Person.prototype.constructor)
+//if we want to inspect that function we use console.dir
+//the constructor property points back to Person
+console.dir(Person.prototype.constructor);
+
+// any function of coure is also an object so therefore it also has a prototype
+
+//create an array
+const arr = [3,5,5,10,1,0,10,0];
+
+// take a look of the prototype of the array 
+// in the prototype of the array we find all these methods that we already know 
+console.log(arr.__proto__);
+// each array does of course not contain all the methods but instead each array will inherit 
+//these methods from it's prototype
+
+//the prototype property of the constructor gonna be the prototype of all the objects created 
+//by that constructor
+
+console.log(arr.__proto__ === Array.prototype);
+
+// just like object using [] is the same like using new Array (new Array = [])
+// when we create an array like this [] , it'is created by the array constructor
+
+//Object prototype
+console.log(arr.__proto__.__proto__);
+
+// if we check documentation mdn about filter() function , we found that the name is Array.prototype.filter()
+
+//the prototype inhertance is really a mechanisme for reusing code , all the built methods have to exist only once
+//somewhere in the javascript engine  , and all the arrys in our code get access to the functions throught the prototype chain , and prototypal inheritance.
+
+// we know that any array inherit methods from it's prototype
+// we can use that knowledge to extend functionalities of arrays 
+
+//add any new method to the prototype property of Array constructor
+Array.prototype.unique = function(){
+    return [...new Set(this)];
+}
+
+// Array.prototype.__proto__.unique = function(){
+//     return [...new Set(this)];
+// }
+
+// return an arry with only unique values
+// we addeda new method to the prototype property  of the array constructor
+// therefore all arrays will inherit unique() method, we can then call that method ona ny array that we want 
+console.log(arr.unique());
+
+
+// extending the prototype of built -in objects is generaly not a good idea
+// the next version of js may add a mehod with the same method that we adding , and may works in different way , and your code will use it 
+// when you work in a team of developpers this really gonna be a bad idea
+
  
- *essentially Person.prototype.constructor  it's gonna point back to person itself.
- 
- *remember that Person.prototype is actually not the prototype of Person , but of all the 
- *objects that created through the Person function.
+// select a DOM element , we already know that DOM elements are behind the scenes objects
+const h1 = document.querySelector('h1');
 
+// the prototype of that object is an HTMLHeadingElement
+//HTML element is a child elemnt of Element
+//Element itself was a child of Node , therefore the prototype of Element gonna be Node
+//the end of prototype chain is Object
+console.dir(h1); // get the actual object
 
- */
-
- //how an object is created using the new operator and constructor function
- //------------------------------------------------------------------------
-
- //when we call a function, any function with new opwerator 
- //the first thing that's gonna happen is that a new empty object is created instantly
- //then thsi keyword in the function call is set to the newly created object
- //inside the function execution context this is now the new empty object 
- //the new object is linked (__proto__property) to the constructor function's prototype property
-//Person.prototype is now the new object prototype which is denoted in __proto__ property of jonas
-//__proto always points to an object prototype , and that is true for all objects in jvascript
-//finally the new object is automatically returned from the constructor function call unless we 
-//explicitly returned something else, but in constructor function like person we usually never do tha.
-
-
-
-//this whole process that just explained , is how it works with functions constructors and ES6 classes
-//but not with the Object.create syntax that we gona use later
-
-
-//why this technique so powerful and useful
-//--------------------------------------------
-/**
- * jonas.calcAge()
- * we're attempting to call calcAge function on jonas object .
- * javascript cannot find the calcAge function directly on jonas object , it ' is simply not there .
- * what's happens now in this situation?
- * if a property or a method cannot be found on certain object , javascript will look into it's prototype,
- * and there is the calcAge function that we are looking for , so javascript will simply use this one.
- *  this behavior that we descripe is what we call PROTOTYPAL INHERITANCE/DELEGATION
- *  so the jonas object inherited the calcAge method from it's prototype ,
- * or in other words it delegated the calcAge functionality to it's prototype
- * the beauty of this is that we can create as many object that we like , and all of them will then
- * inherit this method calcAge().
- * so we can call this calcAge method on all the person objects without the method being directly attached 
- * to all the objects themselves .
- * and this essential for code performance.
- * the all objects can use the calcAge function from them common prototype
- * the ability of looking up methods and properties ina  prototype is what we called the prototype chain 
- * the jonas object and it'sprototype is basically formed a prototype chain 
- */
-
-
- //let's understand the prototype chain better 
- //------------------------------------------
-
- /**
-  * let's remember that Person.prototype itself is also an object , and all objects in javascript have a prototype
-  * therefore Person.prototype itself must also have a protoype, 
-  * and the prototype of Person.prototype is  Object.prototype,
-  * why is that ?
-  * well , Person.prototype is just a simple object , which means that it has been built by the built -in 
-  * object constructor function , and this is the function that has called behing the scenes whenever we want to create a litteral object
-  * an object simply with curly braces {...} === new Object(...) , curly braces is a shortcut of calling a new Object.
-  * what's matter here is that Person.prototype itself needs to have a prototype ,
-  * and since it has been created by the object constructor function ,it's prototype it's onna be Object.prototype.
-  * it's the same logic as with the jonas object .
-  * since jonas has bee build by Person , Person.prototype is the prototype of jonas.
-  * this entire series of links between the object , is what is called the prototype chain .
-  * Object.prototype is usually the top of prototype chain , means that it's prototype is NULL
-  * so it's __proto__ property will simply points to NULL, which then marks the end of the prototype chain .
-  * so in a ceratin way the protoype chain is very similar to the scope chain  but with prototypes
-  * in  a scope chain whenever jabvascript can't find  a certain variable  in a ceratins scope
-  * it looks up into the next scope in the scope chain and try to find the variable there .
-  * in the other hand in the prototype chain whenever javascript can't find a certain property or method
-  * in a certain object  , it's gonna look up into the next prototype in the prototype chain and see 
-  * if it can find it there .
-  * let's see another example of method :
-  * jonas.hasOwnProperty('name')
-  * we call the hasOwnProperty() method on jonas object.
-  * js is gonna start by trying to find the called method on the object itself 
-  * but of course it can't find the hasOwnProperty method on jonas ,so according
-  * on how prototype chaiin works , it will look to it's prototype whcih is Person.prototype
-  * so we didn't defined any hasOwnProperty method there , so js it's gonna not find it there
-  * so therefore it will move on  and look to Object.prototype , the Object.protype has the method there
-  * javascript can then takes this method and run it on jonas object as if hasOwnProperty() is defined directly on jonas
-  * remember that method has not being copied to the jonas object , instead it simply
-  * inherited the method from the Object.prototype throught the prototype chain .
-  * 
-  * 
-  */
+// the function itself is a lso an object , therefore it also had a prototype 
+// the prototype will then contained the methods  that we have use previously on functions 
+//this is the reason we can actualy call methods  on functions , it because they are objects and objects have prototypes
+// and in this case  is the function prototype  
+console.log(x=>x + 1);
